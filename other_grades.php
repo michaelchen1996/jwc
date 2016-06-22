@@ -1,14 +1,10 @@
 <?php
 
-//$zjh = $_POST['zjh'];
+$zjh = $_POST['zjh'];
 $mm = $_POST['mm'];
 $LS_XH = $_POST['LS_XH'];
-//$LS_XH = "2014141463007";
-if ($zjh=="") {
-	$zjh = "2014141463007";
-	$mm = "jwcnbtyjy106";
-}
 
+//SCU GPA
 function toGPA($from) {
 	if ($from>=95) return 4;
 	if ($from>=90) return 3.8;
