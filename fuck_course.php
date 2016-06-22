@@ -2,8 +2,8 @@
 
 
 //用户名、密码、课程号、课序号
-$zjh = '';
-$mm = '';
+$zjh = '2014141463007';
+$mm = 'michael2jwc';
 $kch = '';
 $kxh = '';
 
@@ -24,7 +24,7 @@ while (true) {
 	$data = curl_exec($curl);
 	preg_match("!Set-Cookie: (.*)!", $data, $matches);
 	$cookies = $matches[1];
-	echo "Login! Cookies: ".$cookies."";
+	echo "Login! Cookies: ".$cookies."\n";
 
 	curl_setopt($curl, CURLOPT_COOKIE, $cookies);
 	curl_setopt($curl, CURLOPT_URL, 'http://202.115.47.141/xkAction.do');
