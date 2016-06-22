@@ -48,7 +48,7 @@ while (true) {
 		$sum = $sum + 1;
 		echo $sum.": ".$flag." len: ". strlen($data)."\n";
 	}
-	if ($count == 1) {
+	if ($flag == 1) {
 		echo "Found it!\n";
 		break;
 	}
