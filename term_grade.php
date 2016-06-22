@@ -2,9 +2,8 @@
 
 $zjh = $_POST['zjh'];
 $mm = $_POST['mm'];
-//$zjh = "2014141463007";
-if ($zjh=="2014141463007") $mm = "jwcnbtyjy106";
 
+//SCU GPA
 function toGPA($from) {
 	if ($from>=95) return 4;
 	if ($from>=90) return 3.8;

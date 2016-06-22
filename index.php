@@ -5,7 +5,8 @@
 <body>
 	<h1>Fuck the JWC</h1>
 	<h3>fuck couse</h3>
-	<form action="fuck_couse.php" method="post">
+	<form action="fuck_course.php" method="post">
+		这个功能请在本地运行脚本</br>
 		id:&nbsp;<input type ="text" name ="zjh"\></br>
 		passwd:&nbsp;<input type ="password" name ="mm"\></br>
 		课程号:&nbsp;<input type ="text" name ="kch"\></br>

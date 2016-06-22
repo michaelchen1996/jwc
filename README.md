@@ -4,3 +4,4 @@
 - fuck couse
 - term grade
 - click and judge
+- other grade
