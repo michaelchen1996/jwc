@@ -25,5 +25,12 @@
 		passwd:&nbsp;<input type ="password" name ="mm"\></br>
 		<input type ="submit" value ="start"\></br>
 	</form>
+	</form>
+        <h3>I JUST WANNA LOGIN</h3>
+        <form action="http://202.115.47.141/loginAction.do" method="post">
+                id:&nbsp;<input type ="text" name ="zjh"\></br>
+                passwd:&nbsp;<input type ="password" name ="mm"\></br>
+                <input type ="submit" value ="start"\></br>
+        </form>
 </body>
 </html>
