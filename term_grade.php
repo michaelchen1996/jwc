@@ -19,7 +19,11 @@ function toGPA($from) {
 date_default_timezone_set("Asia/Shanghai");
 set_time_limit(0);
 $curl = curl_init();
-curl_setopt($curl, CURLOPT_URL, 'http://202.115.47.141/loginAction.do?zjh=' . $zjh . '&mm=' . $mm);
+//curl_setopt($curl, CURLOPT_URL, 'http://202.115.47.141/loginAction.do?zjh=' . $zjh . '&mm=' . $mm);
+curl_setopt($curl, CURLOPT_URL, 'http://202.115.47.141/loginAction.do');
+curl_setopt($curl, CURLOPT_POST, 1);
+$post_data = array('zjh'=>$zjh, 'mm'=>$mm);
+curl_setopt($curl, CURLOPT_POSTFIELDS, $post_data);
 curl_setopt($curl, CURLOPT_HEADER, 1);
 curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
 $data = curl_exec($curl);

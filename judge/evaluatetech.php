@@ -25,9 +25,13 @@
 					$curl = curl_init();
 
 				    // 第一次抓取COOKIES
-					curl_setopt($curl, CURLOPT_URL, 'http://202.115.47.141/loginAction.do?zjh='.$zjh.'&'.'mm='.$mm);
+					//curl_setopt($curl, CURLOPT_URL, 'http://202.115.47.141/loginAction.do?zjh='.$zjh.'&'.'mm='.$mm);
+					curl_setopt($curl, CURLOPT_URL, 'http://202.115.47.141/loginAction.do');
 					curl_setopt($curl, CURLOPT_HEADER, 1);
 					curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
+					curl_setopt($curl, CURLOPT_POST, 1);
+					$post_data = array('zjh'=>$zjh, 'mm'=>$mm);
+					curl_setopt($curl, CURLOPT_POSTFIELDS, $post_data);
 					$data = curl_exec($curl);
 					preg_match("!Set-Cookie: (.*)!", $data, $matches);
 					$cookies=$matches[1];

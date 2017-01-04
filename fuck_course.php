@@ -2,8 +2,8 @@
 
 
 //用户名、密码、课程号、课序号
-$zjh = '2014141463007';
-$mm = 'michael2jwc';
+$zjh = '';
+$mm = '';
 $kch = '';
 $kxh = '';
 
@@ -20,7 +20,11 @@ curl_setopt($curl, CURLOPT_HEADER, 1);
 
 while (true) {
 	//初次登陆以获取cookies
-	curl_setopt($curl, CURLOPT_URL, 'http://202.115.47.141/loginAction.do?zjh=' . $zjh . '&mm=' . $mm);
+	//curl_setopt($curl, CURLOPT_URL, 'http://202.115.47.141/loginAction.do?zjh=' . $zjh . '&mm=' . $mm);
+	curl_setopt($curl, CURLOPT_URL, 'http://202.115.47.141/loginAction.do');
+	curl_setopt($curl, CURLOPT_POST, 1);
+	$post_data = array('zjh'=>$zjh, 'mm'=>$mm);
+	curl_setopt($curl, CURLOPT_POSTFIELDS, $post_data);
 	$data = curl_exec($curl);
 	preg_match("!Set-Cookie: (.*)!", $data, $matches);
 	$cookies = $matches[1];
