@@ -17,6 +17,7 @@ $kxh = '';
 $curl = curl_init();
 curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
 curl_setopt($curl, CURLOPT_HEADER, 1);
+curl_setopt($curl, CURLOPT_TIMEOUT, 5);
 
 while (true) {
 	//初次登陆以获取cookies
